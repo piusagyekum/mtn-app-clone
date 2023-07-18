@@ -1,5 +1,5 @@
 import React from "react"
-import { View, Text, StyleSheet, ScrollView } from "react-native"
+import { View, Text, StyleSheet, ScrollView,TouchableOpacity } from "react-native"
 import { globalStyles } from "../styles/globalStyles"
 import { Feather } from "@expo/vector-icons"
 import HomeCard from "../components/HomeCard"
@@ -9,9 +9,10 @@ import { Ionicons } from "@expo/vector-icons"
 import { SimpleLineIcons } from "@expo/vector-icons"
 import { MaterialIcons } from "@expo/vector-icons"
 
-export default function Home() {
+export default function Home({ navigation,route }) {
+  console.log(route)
   return (
-    <View style={globalStyles.container} className="bg-gray-100">
+    <View style={globalStyles.container} className="">
       <ScrollView>
         <Text className="font-bold text-xl text-center my-7">
           Y'ello <Text className="font-semibold">Pius Kwabena</Text>
@@ -95,55 +96,7 @@ export default function Home() {
         <Text className="text-white text-xs">Help</Text>
       </View>
       {/* BOTTOM NAV */}
-      <View className="bg-white  flex-row justify-around absolute bottom-0 left-0 right-0 ">
-        {/* home */}
-        <View className="items-center  p-5">
-          {/* icon */}
-          <Ionicons name="ios-home-outline" size={24} color="black" />
-          {/* label */}
-          <Text className="">Home</Text>
-        </View>
-        {/* buysend */}
-        <View className="items-center  p-5">
-          {/* icon */}
-          <Feather name="shopping-cart" size={24} color="black" />
-          {/* label */}
-          <Text className="">Buy/Send</Text>
-        </View>
-        {/* momo */}
-        <View className="items-center rounded-full border-2 px-5 py-2 relative -top-8 border-gray-400 bg-white">
-          {/* icon */}
-          <MaterialIcons
-            name="send-to-mobile"
-            size={50}
-            color="#022c5e"
-            className="text-red-500"
-          />
-          {/* label */}
-          <Text className="">Momo</Text>
-        </View>
-        {/* for you */}
-        <View className="items-center p-5 ">
-          {/* icon */}
-          <SimpleLineIcons name="handbag" size={24} color="black" />
-          {/* label */}
-          <Text className="">Home</Text>
-        </View>
-        {/* Get more */}
-        <View className="items-center p-5">
-          {/* icon */}
-          <Text className="border px-1 rounded-lg ">
-            <Feather
-              style={{ fontWeight: 500 }}
-              name="more-horizontal"
-              size={24}
-              color="black"
-            />
-          </Text>
-          {/* label */}
-          <Text className="">Get more</Text>
-        </View>
-      </View>
+      
     </View>
   )
 }
