@@ -11,9 +11,9 @@ const Buy = () => {
       <ScrollView>
         <View
           style={{ gap: 10 }}
-          className="flex-row border-2 border-yellow-300 bg-white p-3 rounded-lg mb-6"
+          className="flex-row border-2 border-#ffcb00-300 bg-white p-3 rounded-lg mb-6"
         >
-          <MaterialCommunityIcons name="broadcast" size={30} color="yellow" />
+          <MaterialCommunityIcons name="broadcast" size={30} color="#ffcb00" />
           <View className=" flex-1">
             <Text className="font-bold text-base">Special Days Offer</Text>
             <Text className="text-gray-600 text-sm">

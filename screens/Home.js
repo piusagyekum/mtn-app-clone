@@ -1,5 +1,11 @@
 import React from "react"
-import { View, Text, StyleSheet, ScrollView,TouchableOpacity } from "react-native"
+import {
+  View,
+  Text,
+  StyleSheet,
+  ScrollView,
+  TouchableOpacity,
+} from "react-native"
 import { globalStyles } from "../styles/globalStyles"
 import { Feather } from "@expo/vector-icons"
 import HomeCard from "../components/HomeCard"
@@ -9,7 +15,7 @@ import { Ionicons } from "@expo/vector-icons"
 import { SimpleLineIcons } from "@expo/vector-icons"
 import { MaterialIcons } from "@expo/vector-icons"
 
-export default function Home({ navigation,route }) {
+export default function Home({ navigation, route }) {
   console.log(route)
   return (
     <View style={globalStyles.container} className="">
@@ -21,21 +27,25 @@ export default function Home({ navigation,route }) {
         <HomeCard
           label="Airtime"
           value="Ghc 3.52"
-          icon={<AntDesign name="mobile1" size={24} color="yellow" />}
+          icon={<AntDesign name="mobile1" size={24} color="#ffcb00" />}
         />
         <HomeCard
           label="Data"
           value="2.22 GB"
           other="0.00 MB"
           icon={
-            <MaterialCommunityIcons name="broadcast" size={24} color="yellow" />
+            <MaterialCommunityIcons
+              name="broadcast"
+              size={24}
+              color="#ffcb00"
+            />
           }
         />
         <HomeCard
           label="SMS"
           value="20614 SMS"
           other="0 SMS"
-          icon={<AntDesign name="message1" size={24} color="yellow" />}
+          icon={<AntDesign name="message1" size={24} color="#ffcb00" />}
         />
         <HomeCard
           label="Voice"
@@ -45,7 +55,7 @@ export default function Home({ navigation,route }) {
             <MaterialCommunityIcons
               name="microphone-outline"
               size={28}
-              color="yellow"
+              color="#ffcb00"
             />
           }
         />
@@ -60,7 +70,7 @@ export default function Home({ navigation,route }) {
             <MaterialCommunityIcons
               name="access-point-network"
               size={27}
-              color="yellow"
+              color="#ffcb00"
             />
           </View>
           <View className="flex-1">
@@ -96,7 +106,7 @@ export default function Home({ navigation,route }) {
         <Text className="text-white text-xs">Help</Text>
       </View>
       {/* BOTTOM NAV */}
-      
+     
     </View>
   )
 }
